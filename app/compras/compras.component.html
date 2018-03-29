@@ -1,0 +1,14 @@
+<h1>Compra</h1>
+
+<ul>
+  <li *ngFor="let compra of compras">{{compra.nome}}</li>
+</ul>
+<div>
+</div>
+
+<div>
+
+    <input [(ngModel)]="compra.descricao" placeholder="Qual foi a compra realizada?"/>
+    <button (click)="addCompra()">Enviar</button>
+
+</div>
