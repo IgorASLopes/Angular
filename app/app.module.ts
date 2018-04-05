@@ -4,25 +4,27 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { AmigoComponent } from './amigo/amigo.component';
-import { ComprasComponent } from './compras/compras.component';
 import { FormsModule } from '@angular/forms';
-import { InicioComponent } from './inicio/inicio.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ContratoComponent } from './contrato/contrato.component';
+import { ContratoService } from './contrato/services/contrato.service';
+import { AlunoComponent } from './aluno/aluno.component';
+import { AlunoService } from './aluno/service/aluno.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AmigoComponent,
-    ComprasComponent,
-    InicioComponent
+    ContratoComponent,
+    AlunoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AlunoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
